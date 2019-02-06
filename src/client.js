@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import App from "./components/App";
 import reducer from "./reducer";
+import registerServiceWorker from "./registerServiceWorker";
 
 const initialState = window.APP_STATE;
 
@@ -20,3 +21,5 @@ ReactDOM.hydrate(
   </Provider>,
   document.getElementById("app")
 );
+
+registerServiceWorker();
